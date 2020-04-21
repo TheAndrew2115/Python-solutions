@@ -1,5 +1,4 @@
 import collections
-# s = {{{}}}
     
 def balancedString(s):
     stack = collections.deque()
@@ -9,7 +8,7 @@ def balancedString(s):
     bracketDict[')'] = '('
     prevTop = ''
 
-    for char in s: # {{{}}     stack: {     prevTop: {
+    for char in s:
         if stack:
             prevTop = stack[-1]
 
@@ -25,9 +24,9 @@ def balancedString(s):
     else:
         return False
         
-print(balancedString("{{{}}}")) #True
-print(balancedString("")) #True 
-print(balancedString("{[}]")) #False
-print(balancedString("}}}")) #False
-print(balancedString("{[()(")) #False
-print(balancedString("{}[")) #False
+print(balancedString("{{{}}}")) # True
+print(balancedString("")) # True
+print(balancedString("{[}]")) # False
+print(balancedString("}}}")) # False
+print(balancedString("{[()(")) # False
+print(balancedString("{}[")) # False
